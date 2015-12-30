@@ -51,7 +51,9 @@
     UIImageView *leftImageView = arr[0];
     UIImageView *centerImageView = arr[1];
     UIImageView *rightImageView = arr[2];
-    if (scrollView.contentOffset.x > self.frame.size.width) {
+    //如果拖动很小
+    if (scrollView.contentOffset.x > self.frame.size.width*0.5 && scrollView.contentOffset.x < self.frame.size.width*1.5) return;
+    if (scrollView.contentOffset.x > self.frame.size.width*1.5) {
         //向左滑了,index要变大
         _visibleImageIndex ++;
         _visibleImageIndex = _visibleImageIndex > self.imagesArray.count - 1?0:_visibleImageIndex;
