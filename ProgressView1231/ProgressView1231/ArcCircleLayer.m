@@ -21,7 +21,7 @@
 - (void)drawInContext:(CGContextRef)ctx{
     UIBezierPath *path = [UIBezierPath bezierPath];
     
-    CGFloat radius = MIN(CGRectGetWidth(self.bounds)/2-10, CGRectGetHeight(self.bounds)/2-10);
+    CGFloat radius = circle_radius;
     CGPoint center = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds));
     
     //o

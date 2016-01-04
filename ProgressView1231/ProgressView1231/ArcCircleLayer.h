@@ -6,6 +6,8 @@
 //  Copyright © 2016年 北京物网科技有限公司. All rights reserved.
 //
 
+#define circle_radius 40
+
 #import <QuartzCore/QuartzCore.h>
 #import <UIKit/UIKit.h>
 

@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    ProgressView *pv = [[ProgressView alloc] initWithFrame:CGRectMake(50, 100, 100, 100)];
+    ProgressView *pv = [[ProgressView alloc] initWithFrame:CGRectMake(50, 100, 100, 200)];
     [self.view addSubview:pv];
     self.pv = pv;
     
