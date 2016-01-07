@@ -22,6 +22,7 @@
     CGContextSetLineWidth(ctx, 2);
     CGContextAddPath(ctx, bigCircle.CGPath);
     CGContextStrokePath(ctx);
+    
     //圆弧
     UIBezierPath *arc = [UIBezierPath bezierPath];
     CGFloat arcRadius = bigRadius - 4;
@@ -33,20 +34,33 @@
     CGContextSetLineWidth(ctx, 5);
     CGContextAddPath(ctx, arc.CGPath);
     CGContextStrokePath(ctx);
+    
     //小圆
     UIBezierPath *littleCircle = [UIBezierPath bezierPath];
     CGFloat littleRadius = 15;
     CGFloat distance = arcRadius;
     CGPoint littleCenter = CGPointMake(self.bounds.size.width/2 - cosf((arcStart - arcEnd)/2+arcEnd - M_PI)*distance, self.bounds.size.height/2 - sinf((arcStart - arcEnd)/2+arcEnd-M_PI)*distance);
     [littleCircle addArcWithCenter:littleCenter radius:littleRadius startAngle:0 endAngle:M_PI*2 clockwise:NO];
-    CGContextSetFillColorWithColor(ctx, [UIColor redColor].CGColor);
+    CGContextSetLineWidth(ctx, 1);
+    CGContextSetStrokeColorWithColor(ctx, [UIColor redColor].CGColor);
     CGContextAddPath(ctx, littleCircle.CGPath);
-    CGContextFillPath(ctx);
+    CGContextStrokePath(ctx);
     
+    //文字
+    CGContextSetLineWidth(ctx, 1);
+    CGContextSetStrokeColorWithColor(ctx, [UIColor blackColor].CGColor);
     NSString *string = @"押";
     CGSize size = [string sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]}];
-    [string drawAtPoint:CGPointMake(20, 20) withAttributes:nil];
+    [string drawAtPoint:CGPointMake(littleCenter.x - size.width/2, littleCenter.y - size.height/2) withAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor],NSFontAttributeName:[UIFont systemFontOfSize:14]}];
+    CGContextStrokePath(ctx);
+}
+
+- (void)showAnimation{
     
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+    animation.toValue = @(M_PI * 2);
+    animation.duration = 1;
+    [self addAnimation:animation forKey:nil];
     
 }
 

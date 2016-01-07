@@ -23,9 +23,6 @@
     PieView *pieView = [[PieView alloc] initWithFrame:CGRectMake(50, 100, 200, 200)];
     pieView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:pieView];
-//    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(50, 50, 50, 50)];
-//    view.backgroundColor = [UIColor blackColor];
-//    [pieView addSubview:view];
     self.pieView = pieView;
 }
 
