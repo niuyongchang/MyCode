@@ -12,6 +12,8 @@
 @interface ViewController ()
 
 @property (nonatomic, strong) PieView *pieView;
+@property (nonatomic, strong) CALayer *redLayer;
+@property (nonatomic, strong) CALayer *blueLayer;
 
 @end
 
@@ -24,6 +26,31 @@
     pieView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:pieView];
     self.pieView = pieView;
+    
+    [self hitTest];
+}
+
+- (void)hitTest{
+    
+    self.redLayer = [CALayer layer];
+    self.redLayer.frame = CGRectMake(50, 300, 50, 50);
+    self.redLayer.backgroundColor = [UIColor redColor].CGColor;
+    self.redLayer.zPosition = 10;
+    [self.view.layer addSublayer:self.redLayer];
+    
+    self.blueLayer = [CALayer layer];
+    self.blueLayer.frame = CGRectMake(60, 310, 30, 30);
+    self.blueLayer.backgroundColor = [UIColor blueColor].CGColor;
+    [self.view.layer addSublayer:self.blueLayer];
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    
+    CGPoint point = [[touches anyObject] locationInView:self.view];
+    CALayer *touchedLayer = [self.view.layer hitTest:point];
+    
+    NSLog(@"%@",[touchedLayer isEqual:self.redLayer] ? @"red" : @"blue");
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated{

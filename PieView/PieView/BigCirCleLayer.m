@@ -60,8 +60,8 @@
     CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
     animation.toValue = @(M_PI * 2);
     animation.duration = 1;
+    animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     [self addAnimation:animation forKey:nil];
-    
 }
 
 @end

@@ -52,8 +52,9 @@
     animation.fromValue = @(M_PI * 2);
     animation.toValue = @0;
     animation.duration = 1;
+//    [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     [self addAnimation:animation forKey:nil];
-    
 }
 
 @end

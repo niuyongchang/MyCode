@@ -15,7 +15,6 @@
 		0B098A9F1C3C02FD0084A6F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B098A9D1C3C02FD0084A6F1 /* LaunchScreen.storyboard */; };
 		0B098AA81C3C031F0084A6F1 /* PieView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B098AA71C3C031F0084A6F1 /* PieView.m */; };
 		0B098AAB1C3C1B9D0084A6F1 /* BigCirCleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B098AAA1C3C1B9D0084A6F1 /* BigCirCleLayer.m */; };
-		0B098AAE1C3C1BA90084A6F1 /* LittleCirCleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B098AAD1C3C1BA90084A6F1 /* LittleCirCleLayer.m */; };
 		87DEEA0A1C3E046400C3ECAB /* MiddleCircleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 87DEEA091C3E046400C3ECAB /* MiddleCircleLayer.m */; };
 /* End PBXBuildFile section */
 
@@ -34,8 +33,6 @@
 		0B098AA71C3C031F0084A6F1 /* PieView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieView.m; sourceTree = "<group>"; };
 		0B098AA91C3C1B9D0084A6F1 /* BigCirCleLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BigCirCleLayer.h; sourceTree = "<group>"; };
 		0B098AAA1C3C1B9D0084A6F1 /* BigCirCleLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BigCirCleLayer.m; sourceTree = "<group>"; };
-		0B098AAC1C3C1BA90084A6F1 /* LittleCirCleLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LittleCirCleLayer.h; sourceTree = "<group>"; };
-		0B098AAD1C3C1BA90084A6F1 /* LittleCirCleLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LittleCirCleLayer.m; sourceTree = "<group>"; };
 		87DEEA081C3E046400C3ECAB /* MiddleCircleLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiddleCircleLayer.h; sourceTree = "<group>"; };
 		87DEEA091C3E046400C3ECAB /* MiddleCircleLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MiddleCircleLayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,8 +77,6 @@
 				87DEEA091C3E046400C3ECAB /* MiddleCircleLayer.m */,
 				0B098AA91C3C1B9D0084A6F1 /* BigCirCleLayer.h */,
 				0B098AAA1C3C1B9D0084A6F1 /* BigCirCleLayer.m */,
-				0B098AAC1C3C1BA90084A6F1 /* LittleCirCleLayer.h */,
-				0B098AAD1C3C1BA90084A6F1 /* LittleCirCleLayer.m */,
 				0B098A981C3C02FD0084A6F1 /* Main.storyboard */,
 				0B098A9B1C3C02FD0084A6F1 /* Assets.xcassets */,
 				0B098A9D1C3C02FD0084A6F1 /* LaunchScreen.storyboard */,
@@ -176,7 +171,6 @@
 				0B098A941C3C02FD0084A6F1 /* AppDelegate.m in Sources */,
 				0B098A911C3C02FD0084A6F1 /* main.m in Sources */,
 				87DEEA0A1C3E046400C3ECAB /* MiddleCircleLayer.m in Sources */,
-				0B098AAE1C3C1BA90084A6F1 /* LittleCirCleLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
